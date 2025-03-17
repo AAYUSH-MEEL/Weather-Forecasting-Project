@@ -1,0 +1,45 @@
+# Weather Trend Forecasting
+
+## Objective
+The goal of this project is to analyze the "Global Weather Repository" dataset and forecast future weather trends using time series analysis. This report covers data preprocessing, exploratory data analysis (EDA), model building, and forecasting results.
+
+## Dataset Overview
+- **Source:** Kaggle (Global Weather Repository)
+- **Records:** 59,243
+- **Features:** 41
+- **Time Period:** Various timestamps
+- **Key Features:** Temperature, humidity, wind speed, precipitation, air quality
+
+## Data Cleaning & Preprocessing
+- Converted **'last_updated'** to datetime format.
+- Checked for missing values (**None found**).
+- Identified numerical distributions and outliers.
+
+## Exploratory Data Analysis (EDA)
+- **Temperature Analysis:** Near-normal distribution.
+- **Precipitation Analysis:** Skewed distribution with extreme values.
+- **Visualization:** Histograms of temperature and precipitation trends.
+
+## Time Series Forecasting
+### **Model: ARIMA(5,1,0)**
+- Selected **Berlin** as the city for analysis (305 records available).
+- Trained ARIMA model on historical temperature data.
+- Forecasted next **7 days** of temperature.
+- **Performance Metrics:**
+  - **Mean Absolute Error (MAE):** 1.18°C
+  - **Root Mean Squared Error (RMSE):** 1.40°C
+
+## Forecasting Results
+- A **7-day temperature forecast** for Berlin was generated.
+- The model provides reasonable accuracy within ~1.2°C error margin.
+
+## Deliverables
+- **Python Script:** Contains all data processing and model-building steps.
+- **Report (This Document):** Summary of methodology, results, and insights.
+- **GitHub Repository:** Includes a README.md explaining the project setup and results.
+
+## Conclusion
+This project successfully demonstrates **data science techniques** for weather trend forecasting. Future improvements could include:
+- Using **deep learning (LSTMs, CNNs)** for better accuracy.
+- Expanding forecasting to multiple cities.
+- Incorporating **additional weather indicators** for enhanced predictions.
